@@ -1,19 +1,85 @@
-.start{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.start-div{
-    width: 30vw;
-    height: 60vh;
-    border-radius: 24px;
-    background-color:antiquewhite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Poppins:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.img-start{
-    width: 20vw;
-    height: 20vh;
+.title-start{
+    display: block;
+    font-family: 'Press Start 2P';
+    white-space: nowrap;
+    color: white;
+    margin-bottom: 10vh;
+    border-right: 4px solid;
+    width: 23ch;
+
+    animation: typing 2s steps(23),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.start-div {
+  width: 30vw;
+  height: 60vh;
+  border-radius: 24px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-img-div{
+    margin-top: 2vh;
+}
+
+.img-start {
+  width: 20vw;
+  height: 20vh;
+}
+
+.start-button-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.button-creatte,.button-start {
+  width: 20vw;
+  height: 10vh;
+  appearance: button;
+  background-color: #888075;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2vw;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
