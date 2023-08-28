@@ -1,0 +1,23 @@
+.footer {
+  padding: 10px;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.div-credits-footer {
+  margin-top: 5%;
+}
+
+.credits {
+  color: rgb(107, 113, 118);
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 770px) {
+  .div-credits-footer {
+    margin-top: 40vh;
+  }
+}

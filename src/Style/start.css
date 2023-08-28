@@ -1,0 +1,19 @@
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.start-div{
+    width: 30vw;
+    height: 60vh;
+    border-radius: 24px;
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-start{
+    width: 20vw;
+    height: 20vh;
+}
