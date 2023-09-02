@@ -4,6 +4,15 @@
   align-items: center;
 }
 
+.h2-question{
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 10px;
+    font-size: 2em;
+    font-family: 'Press Start 2P';
+    color: white;
+}
+
 .question-div{
     width: 30vw;
     height: 70vh;
@@ -15,6 +24,8 @@
 
 .question-h2{
     margin-left: 2vw;
+    margin-top: 4vh;
+    color: #2F527B;
 }
 
 .question-option-div{
@@ -28,11 +39,54 @@
     margin-right: 5vw;
 }
 
+.button{
+    width: 26vw;
+    height: 8vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 20px; 
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    color: rgba(96, 102, 208, 0.80);
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.button:hover{
+    background-color: #F9A826;
+    color: white;
+}
+
+.h3-question{
+    width: 10vw;
+}
+
+.icon{
+    font-size: 30px;
+}
+
+.div-icon{
+    margin-left: 4vw;
+    margin-top: 12px;
+}
+
 
 .button-correct{
     width: 26vw;
     height: 8vh;
-    display: flex;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 20px;     
     background-color: #60BF88;
     border: 1px solid #000;
     border-radius: 4px;
@@ -44,7 +98,6 @@
     font-size: 1vw;
     line-height: 20px;
     margin: 0 5px 10px 0;
-    padding: 12px 40px;
     text-align: center;
     transition: 0.5s;
 }
@@ -52,7 +105,10 @@
 .button-incorrect{
     width: 26vw;
     height: 8vh;
-    display: flex;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 20px;     
     background-color: #EA8282;
     border: 1px solid #000;
     border-radius: 4px;
@@ -64,7 +120,24 @@
     font-size: 1vw;
     line-height: 20px;
     margin: 0 5px 10px 0;
-    padding: 12px 40px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.button-next{
+    border-radius: 12px;
+    background: #F9A826;
+    width: 8vw;
+    height: 5vh;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    color: rgba(96, 102, 208, 0.80);
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+    font-weight: 400;
+    font-size: 1vw;
+    margin: 30px 0px 0px 19vw;
     text-align: center;
     transition: 0.5s;
 }
