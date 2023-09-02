@@ -24,31 +24,6 @@
     gap: 10px;
 }
 
-.button{
-    width: 26vw;
-    height: 8vh;
-    display: flex;
-    background-color: white;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
-    color: rgba(96, 102, 208, 0.80);
-    cursor: pointer;
-    font-family: 'Press Start 2P';
-    font-weight: 400;
-    font-size: 1vw;
-    line-height: 20px;
-    margin: 0 5px 10px 0;
-    padding: 12px 40px;
-    text-align: center;
-    transition: 0.5s;
-}
-
-.button:hover{
-    background-color: #F9A826;
-    color: white;
-}
-
 .div-option{
     margin-right: 5vw;
 }
