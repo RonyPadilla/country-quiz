@@ -53,10 +53,13 @@ export const Question = () => {
   return (
     <>
       <section className="question">
-        <h2 className="h2-question">Country quiz</h2>
-        <img src="src\Img\conuntry-quiz-img_.png" alt="" />
+        <h2 className="h2-question-title">Country quiz</h2>
+        <img className="img-question" src="https://github.com/RonyPadilla/country-quiz/blob/main/src/Img/conuntry-quiz-img_.png?raw=true" alt="" />
         {questionDefault.map((question) => (
           <div className="question-div" key={question.id}>
+            <div>
+              <img src="C:\Users\ronym\OneDrive\Escritorio\Projects\Front-end Developer\country-quiz\src\Img\empty-png.png" alt="" />
+            </div>
             <div className="question-h2">
               <h2>{question.question}</h2>
             </div>
@@ -191,9 +194,12 @@ export const Question = () => {
               </div>
             </div>
             {active?
+            <div className="div-button-next">
               <button className="button-next">
                 Next
               </button>
+            </div>
+              
             :''}
           </div>
         ))}
