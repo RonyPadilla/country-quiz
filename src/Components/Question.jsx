@@ -58,7 +58,7 @@ export const Question = () => {
         {questionDefault.map((question) => (
           <div className="question-div" key={question.id}>
             <div>
-              <img src="C:\Users\ronym\OneDrive\Escritorio\Projects\Front-end Developer\country-quiz\src\Img\empty-png.png" alt="" />
+              <img src=" " alt="" />
             </div>
             <div className="question-h2">
               <h2>{question.question}</h2>
