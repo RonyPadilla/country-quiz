@@ -23,7 +23,7 @@
     width: 35vw;
     height: 70vh;
     border-radius: 24px;
-    background-color: antiquewhite;
+    background-color: white;
     display: flex;
     flex-direction: column;
 }
@@ -53,9 +53,9 @@
     justify-content: center; 
     padding: 10px 20px; 
     background-color: white;
-    border: 1px solid #000;
+    border: 1px solid rgba(96, 102, 208, 0.70);
     border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-shadow: #fff 4px 4px 0 0, rgba(96, 102, 208, 0.70) 4px 4px 0 1px;
     color: rgba(96, 102, 208, 0.80);
     cursor: pointer;
     font-family: 'Press Start 2P';
@@ -94,9 +94,9 @@
     justify-content: center; 
     padding: 10px 20px;     
     background-color: #60BF88;
-    border: 1px solid #000;
+    border: 1px solid rgba(96, 102, 208, 0.70);
     border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-shadow: #fff 4px 4px 0 0, rgba(96, 102, 208, 0.70) 4px 4px 0 1px;
     color: rgba(96, 102, 208, 0.80);
     cursor: pointer;
     font-family: 'Press Start 2P';
@@ -116,9 +116,9 @@
     justify-content: center; 
     padding: 10px 20px;     
     background-color: #EA8282;
-    border: 1px solid #000;
+    border: 1px solid rgba(96, 102, 208, 0.70);
     border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-shadow: #fff 4px 4px 0 0, rgba(96, 102, 208, 0.70) 4px 4px 0 1px;
     color: rgba(96, 102, 208, 0.80);
     cursor: pointer;
     font-family: 'Press Start 2P';
@@ -141,10 +141,10 @@
     background: #F9A826;
     width: 8vw;
     height: 5vh;
-    border: 1px solid #000;
+    border: 1px solid rgba(96, 102, 208, 0.70);
     border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
-    color: rgba(96, 102, 208, 0.80);
+    box-shadow: #fff 4px 4px 0 0, rgba(96, 102, 208, 0.70) 4px 4px 0 1px;
+    color: white;
     cursor: pointer;
     font-family: 'Press Start 2P';
     font-weight: 400;
