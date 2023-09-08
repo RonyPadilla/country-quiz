@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Style/create.css";
 
-export const Create = () => {
+export const Create = ({ newQuestion, onNextClick }) => {
   const [formData, setFormData] = useState({
     question: "",
     option1: "",
@@ -15,151 +15,220 @@ export const Create = () => {
     urlForImg: "",
   });
 
+  const [request, setRequest] = useState([]);
+
+  const clearForm = () => {
+    setFormData({
+      question: "",
+      option1: "",
+      option2: "",
+      option3: "",
+      option4: "",
+      checkbox1: false,
+      checkbox2: false,
+      checkbox3: false,
+      checkbox4: false,
+      urlForImg: "",
+    });
+  };
+  
+
   const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    console.log(request.length)
+    if (request.length < 5) {
+      const { name, value, type, checked } = e.target;
 
-    if (type === "text") {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
-
-    if (type === "checkbox") {
-      setFormData({
-        ...formData,
-        [name]: checked,
-      });
+      setFormData((prevDatos) => ({
+        ...prevDatos,
+        [name]: type === "checkbox" ? checked : value,
+      }));
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    clearForm();
+    if (request.length < 5) {
+      const newObject = {
+          id: 1,
+          question: formData.question,
+          option: [
+            ["A", formData.option1, formData.checkbox1],
+            ["B", formData.option2, formData.checkbox2],
+            ["C", formData.option3, formData.checkbox3],
+            ["D", formData.option4, formData.checkbox4],
+          ],
+          url: formData.urlForImg,
+      }
+    setRequest((prevArray) => [...prevArray, newObject]);
+    }
+    
   };
+
+  useEffect(() => {
+    console.log("this is the requests");
+    console.log(request);
+  }, [request]);
+
+  const sendData = () => {
+    newQuestion(request)
+    onNextClick([true,true])
+  }
 
   return (
     <>
       <section className="create">
-        <h2 className="h2-create-title">¡Create you question!</h2>
+        <div className="div-first-info">
+          <h2 className="h2-create-title">¡Create you question!</h2>
+          <div className="div-count-create">
+            <h1>
+              <strong className="strong-count-create">
+                {request.length}/5
+              </strong>
+            </h1>
+          </div>
+        </div>
+
         <div className="create-div">
-          <form onSubmit={handleSubmit} className="form-data">
+          <form autoComplete="off" onSubmit={handleSubmit} className="form-data">
             <div className="form-send-data">
               <div className="form-input-label-div">
-                <label htmlFor="question">question</label>
-                <input
-                  type="text"
-                  className="form-input-create"
+                <label className="form-label" htmlFor="question">
+                  Question
+                </label>
+                <textarea
                   name="question"
-                  placeholder=""
-                  value={formData.inputValue}
+                  type="textarea"
+                  className="form-textarea-create"
+                  placeholder="Write your question"
+                  value={formData.question}
                   onChange={handleInputChange}
-                />
+                ></textarea>
               </div>
             </div>
 
-            <div className="form-send-data">
-              <div className="form-input-label-div">
-                <label htmlFor="option1">option 1</label>
+            <div className="div-for-option">
+              <div className="form-send-data">
+                <div className="form-input-label-div">
+                  <label className="form-label" htmlFor="option1">
+                    Option 1
+                  </label>
+                  <input
+                    type="text"
+                    className="form-input-option-create"
+                    name="option1"
+                    autoComplete="off"
+                    placeholder="Write the option"
+                    value={formData.option1}
+                    onChange={handleInputChange}
+                  />
+                </div>
                 <input
-                  type="text"
-                  className="form-input-create"
-                  name="option1"
-                  placeholder=""
-                  value={formData.inputValue}
+                  type="checkbox"
+                  className="form-checkbox"
+                  name="checkbox1"
+                  checked={formData.checkbox1}
                   onChange={handleInputChange}
                 />
               </div>
-              <input
-                type="checkbox"
-                className="form-checkbox"
-                name="checkbox1"
-                checked={formData.checkboxValue}
-                onChange={handleInputChange}
-              />
-            </div>
 
-            <div className="form-send-data">
-              <div className="form-input-label-div">
-                <label htmlFor="option2">option 2</label>
+              <div className="form-send-data">
+                <div className="form-input-label-div">
+                  <label className="form-label" htmlFor="option2">
+                    Option 2
+                  </label>
+                  <input
+                    type="text"
+                    className="form-input-option-create"
+                    name="option2"
+                    autoComplete="off"
+                    placeholder="Write the option"
+                    value={formData.option2}
+                    onChange={handleInputChange}
+                  />
+                </div>
                 <input
-                  type="text"
-                  className="form-input-create"
-                  name="option2"
-                  placeholder=""
-                  value={formData.inputValue}
+                  type="checkbox"
+                  className="form-checkbox"
+                  name="checkbox2"
+                  checked={formData.checkbox2}
                   onChange={handleInputChange}
                 />
               </div>
-              <input
-                type="checkbox"
-                className="form-checkbox"
-                name="checkbox2"
-                checked={formData.checkboxValue}
-                onChange={handleInputChange}
-              />
-            </div>
 
-            <div className="form-send-data">
-              <div className="form-input-label-div">
-                <label htmlFor="option3">option 3</label>
+              <div className="form-send-data">
+                <div className="form-input-label-div">
+                  <label className="form-label" htmlFor="option3">
+                    Option 3
+                  </label>
+                  <input
+                    type="text"
+                    className="form-input-option-create"
+                    name="option3"
+                    autoComplete="off"
+                    placeholder="Write the option"
+                    value={formData.option3}
+                    onChange={handleInputChange}
+                  />
+                </div>
                 <input
-                  type="text"
-                  className="form-input-create"
-                  name="option3"
-                  placeholder=""
-                  value={formData.inputValue}
+                  type="checkbox"
+                  className="form-checkbox"
+                  name="checkbox3"
+                  checked={formData.checkbox3}
                   onChange={handleInputChange}
                 />
               </div>
-              <input
-                type="checkbox"
-                className="form-checkbox"
-                name="checkbox3"
-                checked={formData.checkboxValue}
-                onChange={handleInputChange}
-              />
-            </div>
 
-            <div className="form-send-data">
-              <div className="form-input-label-div">
-                <label htmlFor="option4">option 4</label>
+              <div className="form-send-data">
+                <div className="form-input-label-div">
+                  <label className="form-label" htmlFor="option4">
+                    Option 4
+                  </label>
+                  <input
+                    type="text"
+                    className="form-input-option-create"
+                    name="option4"
+                    autoComplete="off"
+                    placeholder="Write the option"
+                    value={formData.option4}
+                    onChange={handleInputChange}
+                  />
+                </div>
                 <input
-                  type="text"
-                  className="form-input-create"
-                  name="option4"
-                  placeholder=""
-                  value={formData.inputValue}
+                  type="checkbox"
+                  className="form-checkbox"
+                  name="checkbox4"
+                  checked={formData.checkbox4}
                   onChange={handleInputChange}
                 />
               </div>
-              <input
-                type="checkbox"
-                className="form-checkbox"
-                name="checkbox4"
-                checked={formData.checkboxValue}
-                onChange={handleInputChange}
-              />
             </div>
 
             <div className="form-send-data">
               <div className="form-input-label-div">
-                <label htmlFor="urlForImg">URL for img</label>
+                <label className="form-label" htmlFor="urlForImg">
+                  URL for img
+                </label>
                 <input
                   type="text"
                   className="form-input-create"
                   name="urlForImg"
-                  placeholder=""
-                  value={formData.inputValue}
+                  autoComplete="off"
+                  placeholder="Write the url of the img"
+                  value={formData.urlForImg}
                   onChange={handleInputChange}
                 />
               </div>
             </div>
 
             <div className="form-send-data">
-              <button className="button-form-submit" type="submit">
-                Enviar
-              </button>
+              {request.length < 5? <button 
+              className="button-form-submit" type="submit">
+                Send
+              </button>:<button className="button-form-submit" onClick={sendData}>
+              Start
+              </button>}
             </div>
           </form>
         </div>

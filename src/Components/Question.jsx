@@ -5,14 +5,15 @@ import confetti from "canvas-confetti";
 import { BsCheckCircle, BsXCircle } from "react-icons/bs";
 import { PiCellSignalNoneLight } from "react-icons/pi";
 
-export const Question = () => {
+export const Question = ({ questions }) => {
 
   const [active, setActive] = useState(false);
   const [trueAnswer, setTrueAnswer] = useState(false);
   const [buttonSelect, setButtonSelect] = useState({ id: 0, answer: 0 });
   const [controller, setController] = useState(true)
 
-  const questionDefault = [
+
+  const question = [
     {
       id: 1,
       question: "Kuala Lumpur is the capital of",
@@ -22,14 +23,9 @@ export const Question = () => {
         ["C", "Sweden", false],
         ["D", "Austria", false],
       ],
+      url: 'https://th.bing.com/th/id/R.56d49475666a9f8c4c91e4c2daf6e4f2?rik=oCfZi8sMVjCPKQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f9%2f9c%2fBandera_de_Iturbide.png&ehk=P4utKjnCXrSKMs7BBSlreZTvQ8c8KGAeiDnn3J%2fowQE%3d&risl=&pid=ImgRaw&r=0',
     },
   ];
-
-  console.log(
-    questionDefault.map((question) => {
-      return question.option[0][1];
-    })
-  );
 
   const handleClick = (id, answer) => {
     if (controller) {
@@ -44,18 +40,15 @@ export const Question = () => {
     
   };
 
-  console.log(buttonSelect);
-  console.log(active && buttonSelect.id == 4)
-  console.log(active)
-  console.log(buttonSelect.id)
-  console.log('this is the response for the icon '+(active && buttonSelect.id == 4))
+  console.log(questions)
+  console.log(question)
 
   return (
     <>
       <section className="question">
         <h2 className="h2-question-title">Country quiz</h2>
         <img className="img-question" src="https://github.com/RonyPadilla/country-quiz/blob/main/src/Img/conuntry-quiz-img_.png?raw=true" alt="" />
-        {questionDefault.map((question) => (
+        {question.map((question) => (
           <div className="question-div" key={question.id}>
             <div>
               <img src=" " alt="" />
