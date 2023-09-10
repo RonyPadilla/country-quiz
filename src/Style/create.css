@@ -129,3 +129,75 @@
   background-color: #7d82d9;
   color: white;
 }
+
+@media (max-width: 800px) {
+  .div-first-info{
+      width: 60vw;
+      height: 35vw;
+      margin-bottom: auto;
+  }
+  
+  .h2-create-title {
+    font-size: 4vw;
+  }
+  .strong-count-create{
+    font-size: 5vw;
+  }
+  
+  .create-div {
+    width: 80vw;
+    height: 60vh;
+    margin-top: -5vh;
+    padding: 5vw;
+  }
+  
+  .form-data {
+    margin-top: 4%;
+  }
+  
+  .form-send-data {
+    margin-bottom: 2%;
+  }
+  
+  .form-label{
+      font-size: 3vw;
+  }
+  
+  .form-textarea-create {
+    width: 70vw;
+    height: 15vh;
+    font-size: 2vh;
+    margin-bottom: 1vh;
+    padding: 4px 8px;
+  }
+  
+  .form-input-option-create {
+      width: 25vw;
+      height: 4vh;
+      font-size: 1vh;
+      margin-bottom: 1vh;
+    }
+    
+    .form-checkbox {
+      margin-top: 5%;
+      margin-left: 4%;
+      width: 5vw;
+    }
+  
+  .form-input-create {
+    width: 60vw;
+    height: 4vh;
+    font-size: 1.3vh;
+    margin-bottom: 1vh;
+  }
+  
+  .button-form-submit {
+    font-size: 4vw;
+
+  }
+  
+  .button-form-submit:hover {
+    background-color: #7d82d9;
+    color: white;
+  }
+}
