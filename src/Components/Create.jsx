@@ -36,7 +36,6 @@ export const Create = ({ newQuestion, onNextClick }) => {
   
 
   const handleInputChange = (e) => {
-    console.log(request.length)
     if (request.length < 5) {
       const { name, value, type, checked } = e.target;
 
@@ -70,7 +69,6 @@ export const Create = ({ newQuestion, onNextClick }) => {
 
   useEffect(() => {
     console.log("this is the requests");
-    console.log(request);
   }, [request]);
 
   const sendData = () => {

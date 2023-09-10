@@ -88,8 +88,6 @@ export const Question = ({
     setCountQuestions(countQuestions + 1);
   };
 
-  console.log('this is he url' + question.url + '---------------')
-
   const handleClick = (id, answer) => {
     if (controller) {
       setActive(!active);
@@ -106,9 +104,6 @@ export const Question = ({
   const handleFinish = () => {
     finish(true);
   };
-
-  console.log(questions);
-  console.log(valueCountCorrect);
 
   return (
     <>

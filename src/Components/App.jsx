@@ -1,4 +1,3 @@
-import "../Style/app.css";
 import { useState } from "react";
 import { Start } from "./Start.jsx";
 import { Question } from "./Question.jsx";
@@ -10,8 +9,6 @@ export const App = () => {
   const [finish, setFinish] = useState(false);
   const [question, setQuestion] = useState([]);
   const [sendCountCorrect, setSendCountCorrect] = useState(0);
-
-  console.log(finish);
 
   return (
     <>

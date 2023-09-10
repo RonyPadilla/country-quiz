@@ -7,15 +7,24 @@
   align-items: center;
 }
 
+.div-title-start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 5vh;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
 .title-start{
-    display: block;
     font-family: 'Press Start 2P';
-    white-space: nowrap;
+    font-size: 3vw;
+    margin: auto;
     color: white;
-    margin-bottom: 10vh;
     border-right: 4px solid;
     width: 23ch;
-
     animation: typing 2s steps(23),
     blink .5s infinite step-end alternate;
     overflow: hidden;
