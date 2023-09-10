@@ -185,14 +185,15 @@
       
       .question-div-with-img{
           width: 80vw;
-          height: 75vh;
+          height: 60vh;
+          padding-bottom: 20%;
       }
       
       .question-div-without-img{
           width: 80vw;
-          height: 70vh;
+          height: 50vh;
           border-radius: 24px;
-          padding-bottom: 10%;
+          padding-bottom: 20%;
       }
       
       .question-div-img{

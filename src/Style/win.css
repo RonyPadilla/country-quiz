@@ -71,9 +71,15 @@
 
 @media (max-width: 800px) {
 
+    .h2-quiz-title {
+        margin-left: 10vw;
+    }
+
   .win-quiz-div {
-    width: 80vw;
+    width: 90vw;
     height: 100%;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   .win-quiz-img {
@@ -93,6 +99,7 @@
   .p-quiz-win {
     font-size: 4vw;
     margin-top: auto;
+    color: #1d355d;
   }
 
   .strong-quiz-win {
