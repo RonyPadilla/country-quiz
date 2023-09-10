@@ -1,9 +1,9 @@
 import "../Style/app.css";
 import { useState } from "react";
-import { Start } from "./Start";
-import { Question } from "./Question";
-import { Create } from "./Create";
-import { Win } from "./Win";
+import { Start } from "./Start.jsx";
+import { Question } from "./Question.jsx";
+import { Create } from "./Create.jsx";
+import { Win } from "./Win.jsx";
 
 export const App = () => {
   const [start, setStart] = useState([false, false]);
