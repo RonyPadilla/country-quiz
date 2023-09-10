@@ -124,8 +124,8 @@ export const Question = ({
               </div>
             )}
 
-            <div className="question-h2">
-              <h2>{question.question}</h2>
+            <div className="div-question-h2">
+              <h2 className="question-h2">{question.question}</h2>
             </div>
             <div className="question-option-div">
               <div>
