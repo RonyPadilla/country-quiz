@@ -92,3 +92,44 @@
   vertical-align: middle;
   white-space: nowrap;
 }
+
+@media (max-width: 800px) {
+  
+.div-title-start{
+  width: 100vw;
+  height: 5vh;
+}
+
+.title-start{
+    font-size: 4vw;
+}
+
+.start-div {
+  width: 80vw;
+  height: 60vh;
+}
+
+.start-img-div{
+    margin-top: 2vh;
+}
+
+.img-start {
+  width: 70vw;
+}
+
+.start-button-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.button-creatte,.button-start {
+  width: 70vw;
+  height: 10vh;
+  font-size: 5vw;
+
+}
+
+}
