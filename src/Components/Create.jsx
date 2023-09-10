@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import "../Style/create.css";
 
 export const Create = ({ newQuestion, onNextClick }) => {
@@ -16,6 +17,7 @@ export const Create = ({ newQuestion, onNextClick }) => {
   });
 
   const [request, setRequest] = useState([]);
+  const [count, setCount] = useState(1)
 
   const clearForm = () => {
     setFormData({
@@ -49,8 +51,9 @@ export const Create = ({ newQuestion, onNextClick }) => {
     e.preventDefault();
     clearForm();
     if (request.length < 5) {
+      setCount(count+1)
       const newObject = {
-          id: 1,
+          id: count,
           question: formData.question,
           option: [
             ["A", formData.option1, formData.checkbox1],
@@ -236,3 +239,8 @@ export const Create = ({ newQuestion, onNextClick }) => {
     </>
   );
 };
+
+Create.propTypes ={
+  newQuestion: PropTypes.func.isRequired,
+  onNextClick: PropTypes.func.isRequired
+}

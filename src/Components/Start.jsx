@@ -1,4 +1,5 @@
 import '../Style/start.css'
+import PropTypes from "prop-types";
 
 export const Start = ({ onNextClick }) => {
 
@@ -24,4 +25,8 @@ export const Start = ({ onNextClick }) => {
         </div>
     </section>
     </>)
+}
+
+Start.propTypes = {
+  onNextClick: PropTypes.func.isRequired
 }
