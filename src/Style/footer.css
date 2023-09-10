@@ -1,19 +1,14 @@
 .footer {
+  margin-top: 1%;
+  margin-left: 0%;  
+  left: 0;
+  right: 0;
+  color: white;
   padding: 10px;
-  margin-bottom: 0%;
-  padding-bottom: 0%;
 }
 
-.div-credits-footer {
-  margin-top: 5%;
-}
-
-.credits {
-  color: rgb(107, 113, 118);
-  font-size: large;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.credits{
+  margin-left: 0%;
 }
 
 @media (max-width: 770px) {
