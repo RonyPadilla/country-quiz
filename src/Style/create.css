@@ -132,14 +132,21 @@
 
 @media (max-width: 800px) {
   .div-first-info{
-      width: 60vw;
-      height: 35vw;
+      width: 100vw;
       margin-bottom: auto;
+      padding-left: 5vw;
+      margin: 0%;
   }
   
   .h2-create-title {
+    width: 50vw;
     font-size: 4vw;
   }
+
+  .div-count-create{
+    margin-right: auto;
+  }
+
   .strong-count-create{
     font-size: 5vw;
   }
@@ -147,7 +154,7 @@
   .create-div {
     width: 80vw;
     height: 60vh;
-    margin-top: -5vh;
+    margin-top: 0vh;
     padding: 5vw;
   }
   
@@ -195,9 +202,5 @@
     font-size: 4vw;
 
   }
-  
-  .button-form-submit:hover {
-    background-color: #7d82d9;
-    color: white;
-  }
+
 }
