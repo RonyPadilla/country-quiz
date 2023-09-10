@@ -183,12 +183,6 @@
 
 @media (max-width: 800px) {
       
-      .img-question{
-          width: 25%;
-          margin-top: 12vh;
-          margin-left: 50%;
-      }
-      
       .question-div-with-img{
           width: 80vw;
           height: 75vh;

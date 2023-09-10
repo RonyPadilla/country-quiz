@@ -105,15 +105,16 @@ export const Question = ({
     finish(true);
   };
 
+
   return (
     <>
       <section className="question">
         <h2 className="h2-question-title">Country quiz</h2>
-        <img
+        {window.innerWidth > 800 ? <img
           className="img-question"
           src="https://github.com/RonyPadilla/country-quiz/blob/main/src/Img/conuntry-quiz-img_.png?raw=true"
-          alt=""
-        />
+          alt="" 
+        /> : ''}
         {
           <div className={`${question.url === "" ? "question-div-without-img" : "question-div-with-img"}`} key={question.id}>
             {question.url === "" ? (
